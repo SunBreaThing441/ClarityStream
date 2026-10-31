@@ -1,0 +1,126 @@
+/** FONT-FAMILY */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/** TAILWIND CSS & DAISY UI */
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: dark --default;
+}
+
+@theme {
+  --color-primary: #ff2a55;
+  --color-primary-content: #ffffff;
+  --color-secondary: #94a3b8;
+  --color-accent: #00ff66;
+  --color-accent-content: #ff2a55;
+  --color-neutral: #18181b;
+  --color-neutral-content: #ffffff;
+}
+
+:root, [data-theme="dark"] {
+  color-scheme: dark;
+  --color-primary: #ff2a55;
+  --color-primary-content: #ffffff;
+  --color-secondary: #94a3b8;
+  --color-accent: #00ff66;
+  --color-accent-content: #ff2a55;
+  --color-base-100: #09090b;
+  --color-base-200: #121216;
+  --color-base-300: #1c1c24;
+  --color-base-content: #f4f4f5;
+  --color-neutral: #18181b;
+  --color-neutral-content: #ffffff;
+}
+
+/** COMMON STYLING */
+/* heading - poppins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #060608;
+  color: #a1a1aa;
+}
+
+/* Dark Theme Container Cards & Panels */
+.bg-white {
+  background-color: #0f0f13 !important;
+  color: #f4f4f5 !important;
+  border-color: #27272a !important;
+}
+
+.bg-\[\#f8fafc\] {
+  background-color: #121217 !important;
+  color: #f4f4f5 !important;
+}
+
+/** NAVLINK STYLING */
+.sectionPadding {
+  @apply py-8 md:py-12 lg:py-16 xl:py-20;
+}
+.sectionMargin {
+  @apply my-8 md:my-12 lg:my-16 xl:my-20;
+}
+.navlink {
+  @apply p-0 font-semibold text-zinc-300 hover:text-accent hover:bg-transparent!;
+}
+.active {
+  color: #00ff66 !important;
+  text-shadow: 0 0 12px rgba(0, 255, 102, 0.5);
+}
+
+/** MAKE BOTTOM TOOLTIP APPEAR LOWER */
+.tooltip.tooltip-bottom:before {
+  margin-top: 12px !important;
+}
+
+/** MOVE TOOLTIP ARROW ALSO */
+.tooltip.tooltip-bottom:after {
+  margin-top: 12px !important;
+}
+
+/** FORM INPUT */
+input,
+select,
+textarea {
+  @apply py-4 border-zinc-700 bg-zinc-900/90 text-white placeholder-zinc-500 focus:outline-accent focus:border-accent;
+}
+
+/* Tables in dark theme */
+.table {
+  color: #e4e4e7 !important;
+}
+.table th {
+  color: #ffffff !important;
+  background-color: #16161c !important;
+  border-bottom: 1px solid #27272a !important;
+}
+.table td {
+  color: #d4d4d8 !important;
+  border-bottom: 1px solid #1f1f23 !important;
+}
+.table-zebra tbody tr:nth-child(even) {
+  background-color: #121217 !important;
+}
+.table-zebra tbody tr:nth-child(odd) {
+  background-color: #0c0c10 !important;
+}
+.table tr:hover {
+  background-color: #181822 !important;
+}
+
+/* Modals */
+.modal-box {
+  background-color: #101015 !important;
+  color: #f4f4f5 !important;
+  border: 1px solid #27272a !important;
+}
